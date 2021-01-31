@@ -18,7 +18,7 @@ export default function Home() {
       </Link>
       </h1>
       
-      <form data-netlify="true">
+      <form name="ammosub" method="POST" data-netlify="true">
         <div>
           <label for="manufacturer">Manufacturer: </label>
           <input type="text" id="manufacturer" placeholder="Manufacturer name" required />
