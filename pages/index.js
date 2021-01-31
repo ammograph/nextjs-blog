@@ -1,62 +1,58 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Ammo Submission Form</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <h1 className="title">
+        Read{' '}
+      <Link href="/posts/first-post">
+      <a>this page!</a>
+      </Link>
+      </h1>
+      
+      <form data-netlify="true">
+        <div>
+          <label for="manufacturer">Manufacturer: </label>
+          <input type="text" id="manufacturer" placeholder="Manufacturer name" required />
         </div>
+        <div>
+          <label for="product">Product: </label>
+          <input type="text" id="product" placeholder="Product name" required />
+        </div>
+        <div>
+          <label for="ammocal">Choose Caliber</label>
+          <select id="ammocal">
+            <option value="223rem">.233 Rem</option>
+            <option value="556nato">5.56 NATO</option>
+            <option value="6.5gren">6.5 Grendel</option>
+            <option value="6.8spc">6.8 SPC</option>
+            <option value="300blk">.300 Blackout</option>
+        </select>
+        </div>
+        <div>
+            <label for="terms">
+            <input id="terms" type="checkbox" required />
+              I agree to the terms and privacy policy.
+            </label>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
+          Powered by Me and fuckthisshit.com
       </footer>
 
       <style jsx>{`
@@ -81,7 +77,7 @@ export default function Home() {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 1px solid #000000;
           display: flex;
           justify-content: center;
           align-items: center;
